@@ -1,6 +1,4 @@
-package OOP.clases.modificadores.modstatic;
-
-import OOP.clases.modificadores.paquete1.ClasePaquete1;
+package OOP.modificadores.modstatic;
 
 public class TestModificadoresStatic {
     public static void main(String[] args) {

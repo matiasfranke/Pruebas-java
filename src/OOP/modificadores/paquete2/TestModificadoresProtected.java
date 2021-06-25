@@ -1,7 +1,6 @@
-package OOP.clases.modificadores.paquete2;
+package OOP.modificadores.paquete2;
 
-import OOP.clases.modificadores.paquete1.ClasePaquete1;
-import OOP.clases.modificadores.paquete1.ClasePaquete1Hija;
+import OOP.modificadores.paquete1.ClasePaquete1Hija;
 
 public class TestModificadoresProtected {
     public static void main(String[] args) {

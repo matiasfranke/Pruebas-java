@@ -1,9 +1,6 @@
-package OOP.clases.modificadores.paquete2;
+package OOP.modificadores.paquete2;
 
-import OOP.clases.abstracta.CajaAhorro;
-import OOP.clases.abstracta.Cuenta;
-import OOP.clases.abstracta.CuentaCorriente;
-import OOP.clases.modificadores.paquete1.ClasePaquete1;
+import OOP.modificadores.paquete1.ClasePaquete1;
 
 public class TestModificadores {
     public static void main(String[] args) {

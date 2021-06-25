@@ -1,4 +1,4 @@
-package OOP.clases.modificadores.paquete1;
+package OOP.modificadores.paquete1;
 
 public class ClasePaquete1 {
     private String atributoPrivado;

@@ -1,4 +1,4 @@
-package OOP.clases.modificadores.modstatic;
+package OOP.modificadores.modstatic;
 
 public class Atributoestatico {
 
