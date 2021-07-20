@@ -1,2 +1,5 @@
-package OOP.polimorfismo.interfaces;public interface Animal {
+package OOP.polimorfismo.interfaces;
+
+public interface Animal {
+    public void speak();
 }

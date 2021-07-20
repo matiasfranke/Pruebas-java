@@ -1,4 +1,4 @@
-package OOP.polimorfismo;
+package OOP.polimorfismo.herencia;
 
 public class Animal {
     public void pisoPatita() {

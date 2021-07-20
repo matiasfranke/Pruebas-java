@@ -1,19 +1,18 @@
-package OOP.polimorfismo.herencia;
+package OOP.polimorfismo.sobrecarga;
 
-import OOP.clases.abstracta.CajaAhorro;
-import OOP.clases.abstracta.Cuenta;
-import OOP.clases.abstracta.CuentaCorriente;
+import OOP.polimorfismo.herencia.Animal;
+import OOP.polimorfismo.herencia.Gato;
+import OOP.polimorfismo.herencia.Perro;
 
-public class TestHerencia {
+public class TestSobrecarga {
     public static void main(String[] args) {
-       Animal animal = new Animal();
-       Animal perro = new Perro();
-       Animal gato = new Gato();
-        //       test 1 piso patita clase generica
-        animal.pisoPatita();
-        //       test 2 piso patita clase Gato
-        gato.pisoPatita();
-        //       test 3 piso patita clase Perro
-        perro.pisoPatita();
+       Calculadora calculadora = new Calculadora();
+
+        //       test 1 suma integers
+        calculadora.printSuma(2 , 2);
+        //       test 2 suma como string
+        calculadora.printSuma("2", "2");
+        //       test 3 suma q no suma nada... pero suma el ejemplo!
+        calculadora.printSuma("ah re que no sumaba!");
     }
 }

@@ -1,10 +1,7 @@
-package OOP.clases.interfaces;
+package OOP.polimorfismo.interfaces;
 
 public class Pig implements Animal {
-    public void animalSound() {
+    public void speak() {
         System.out.println("The pig says: oink oink");
-    }
-    public void sleep() {
-        System.out.println("oinkZzz oinkZzz");
     }
 }

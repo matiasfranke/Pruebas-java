@@ -1,11 +1,9 @@
-package OOP.clases.interfaces;
+package OOP.polimorfismo.interfaces;
+
+
 
 public class Dog implements Animal {
-    public void animalSound() {
+    public void speak() {
         System.out.println("The dog says: guau guau");
     }
-    public void sleep() {
-        System.out.println("Zzz");
-    }
-
 }
