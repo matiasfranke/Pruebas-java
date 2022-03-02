@@ -1,21 +1,49 @@
-package OOP.Generics.nuestrogeneric;
+package OOP.Collections.Lists;
 
+
+import OOP.Generics.nuestrogeneric.Persona;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.LinkedList;
 import java.util.List;
 
-public class TestGenerics {
+public class TestLists {
 
     public static void main(String[] args) {
-        // Generamos una clase persona con un campo generico
-        Persona<String> personaTexto = new Persona<>("Pepe", "11.222.333"); // A aprtir de Java 8 no es mas necesario volver a aclarar la clase cuando se hace el new
-        System.out.println("Imprimo persona genric con dni string");
-        System.out.println(personaTexto);
+        // Es buena practica declarar una lista usando la interfaz y no su implementacion concreta
+        List<String> lista = new ArrayList<>();
+        System.out.println("Imprimo Lista con implementacion ArrayList");
+        lista.addAll(Arrays.asList("a","b","c","d"));
+        for (String elemento : lista) {
+            System.out.println(elemento);
+        }
+        System.out.println("=======================================");
+        System.out.println("agrego un elemento");
+        lista.add("elemento nuevo");
+        for (String elemento : lista) {
+            System.out.println(elemento);
+        }
+        System.out.println("=======================================");
+        System.out.println("remuevo un elemento");
+        lista.remove("a");
+        for (String elemento : lista) {
+            System.out.println(elemento);
+        }
+        System.out.println("=======================================");
+        System.out.println("obtengo un elemento por su posicion. en este caso la posicion 0"); // OJO ACA, SI EL LA POSICION NO EXITE TIRA UNA EXCEPTION
+        System.out.println(lista.get(0));
 
-        Persona<Integer> personaNumero = new Persona<>("Pepe", 11222333);
-        System.out.println("Imprimo persona genric con dni numero");
-        System.out.println(personaNumero);
+
+        // Cambio implementacion a LinkedList
+        System.out.println("=======================================");
+        System.out.println("Imprimo Lista con implementacion LinkedList");
+        lista = new LinkedList<>();
+        lista.addAll(Arrays.asList("e","f","g","h"));
+        for (String elemento : lista) {
+            System.out.println(elemento);
+        }
+        // Es importante ver que es muy facil cambiar la implementacion si declaramos la lista usando la interfaz
 
     }
 }

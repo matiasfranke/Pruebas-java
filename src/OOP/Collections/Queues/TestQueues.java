@@ -1,49 +1,28 @@
-package OOP.Collections.Lists;
+package OOP.Collections.Queues;
 
 
-import OOP.Generics.nuestrogeneric.Persona;
+import java.util.*;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.LinkedList;
-import java.util.List;
-
-public class TestLists {
+public class TestQueues {
 
     public static void main(String[] args) {
-        // Es buena practica declarar una lista usando la interfaz y no su implementacion concreta
-        List<String> lista = new ArrayList<>();
-        System.out.println("Imprimo Lista con implementacion ArrayList");
-        lista.addAll(Arrays.asList("a","b","c","d"));
-        for (String elemento : lista) {
-            System.out.println(elemento);
-        }
-        System.out.println("=======================================");
-        System.out.println("agrego un elemento");
-        lista.add("elemento nuevo");
-        for (String elemento : lista) {
-            System.out.println(elemento);
-        }
-        System.out.println("=======================================");
-        System.out.println("remuevo un elemento");
-        lista.remove("a");
-        for (String elemento : lista) {
-            System.out.println(elemento);
-        }
-        System.out.println("=======================================");
-        System.out.println("obtengo un elemento por su posicion. en este caso la posicion 0"); // OJO ACA, SI EL LA POSICION NO EXITE TIRA UNA EXCEPTION
-        System.out.println(lista.get(0));
-
-
-        // Cambio implementacion a LinkedList
-        System.out.println("=======================================");
-        System.out.println("Imprimo Lista con implementacion LinkedList");
-        lista = new LinkedList<>();
-        lista.addAll(Arrays.asList("e","f","g","h"));
-        for (String elemento : lista) {
-            System.out.println(elemento);
-        }
-        // Es importante ver que es muy facil cambiar la implementacion si declaramos la lista usando la interfaz
+        // La cola responde a la estructura FIFO (first in, first out) igual que una cola en al vida real
+        Queue<String> cola = new PriorityQueue<>();
+        System.out.println("Agrego a la cola \"a\", \"b\", \"c\", \"d\"");
+        cola.add("a");
+        cola.add("b");
+        cola.add("c");
+        cola.add("d");
+        System.out.println("Imprimo Cola tomando elemento con peek, toma el primer elemento pero no lo remueve");
+        System.out.println(cola.peek());
+        System.out.println("Vuelvo a usar peek, el elemento sigue siendo el mismo");
+        System.out.println(cola.peek());
+        System.out.println("Uso el metodo poll, toma el elemento y lo remueve de la cola");
+        System.out.println(cola.poll());
+        System.out.println("Vuelvo a usar poll, toma el elemento siguiente al que removio antes");
+        System.out.println(cola.poll());
+        System.out.println("Uso remove, el uso es similar a poll, la diferencia es q si la cola esta vacia remove tira una exceptrion");
+        System.out.println(cola.remove());
 
     }
 }

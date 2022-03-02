@@ -1,49 +1,50 @@
-package OOP.Collections.Lists;
+package OOP.Collections.IteradoresOBucles;
 
 
-import OOP.Generics.nuestrogeneric.Persona;
+import java.util.*;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.LinkedList;
-import java.util.List;
-
-public class TestLists {
+public class TestIteradores {
 
     public static void main(String[] args) {
-        // Es buena practica declarar una lista usando la interfaz y no su implementacion concreta
+        // defino una lista y la recorro de diferentes maneras
         List<String> lista = new ArrayList<>();
-        System.out.println("Imprimo Lista con implementacion ArrayList");
-        lista.addAll(Arrays.asList("a","b","c","d"));
-        for (String elemento : lista) {
-            System.out.println(elemento);
-        }
-        System.out.println("=======================================");
-        System.out.println("agrego un elemento");
-        lista.add("elemento nuevo");
-        for (String elemento : lista) {
-            System.out.println(elemento);
-        }
-        System.out.println("=======================================");
-        System.out.println("remuevo un elemento");
-        lista.remove("a");
-        for (String elemento : lista) {
-            System.out.println(elemento);
-        }
-        System.out.println("=======================================");
-        System.out.println("obtengo un elemento por su posicion. en este caso la posicion 0"); // OJO ACA, SI EL LA POSICION NO EXITE TIRA UNA EXCEPTION
-        System.out.println(lista.get(0));
+        lista.addAll(Arrays.asList("a","b","c","d","e","f","g"));
 
-
-        // Cambio implementacion a LinkedList
+        System.out.println("Imprimo Lista con un FOR");
+        for(int i=0;i<lista.size();i++) {
+            System.out.println(lista.get(i));
+        }
         System.out.println("=======================================");
-        System.out.println("Imprimo Lista con implementacion LinkedList");
-        lista = new LinkedList<>();
-        lista.addAll(Arrays.asList("e","f","g","h"));
+        System.out.println("Imprimo Lista con un FOR EACH");
         for (String elemento : lista) {
             System.out.println(elemento);
         }
-        // Es importante ver que es muy facil cambiar la implementacion si declaramos la lista usando la interfaz
+        System.out.println("=======================================");
+        System.out.println("Imprimo Lista con un WHILE");
+        int j = 0;
+        while(j < lista.size()) {
+            System.out.println(lista.get(j));
+            j++; // incremento el valor de j, equivalente a j= j+1;
+        }
+        System.out.println("=======================================");
+        System.out.println("Imprimo Lista con un DO WHILE"); // A diferencia de while, siempre ejecuta al menos una iteracion
+
+        int k = 0;
+        do {
+            if (lista.size() > 0) { // checkeo que tenga al menos 1 elemento ya que la primera iteracion la hace siempre
+                System.out.println(lista.get(k));
+            }
+            k++;
+        } while (k < lista.size());
+
+        System.out.println("=======================================");
+        System.out.println("Imprimo Lista con un ITERATOR");
+        Iterator<String> it = lista.iterator();
+        // Se combina con un while
+        while(it.hasNext()) { // Evalua si tiene otro elemento o llegó al final
+            System.out.println(it.next()); // itera hasta que la colección termine;
+        }
+
 
     }
 }
