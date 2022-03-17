@@ -1,12 +1,16 @@
 package OOP.clases.Enum;
 
-import OOP.clases.definicion.Persona;
 
 public class TestEnum {
     public static void main(String[] args) {
-        Persona pepe = new Persona("pepe");
-        Persona juan = new Persona("juan");
-        pepe.come();
-        juan.trabaja();
+       System.out.println("Imprimo constante del Enum: ");
+       System.out.println(EnumEstados.ONLINE);
+       System.out.println("Imprimo constante obteniendola a partir de un metodo en el enum: ");
+       System.out.println(EnumEstados.fromValue("OFFLINE"));
+       String estado = "ONLINE";
+        System.out.println("Uso enum en condicion para imprimir: ");
+       if (EnumEstados.ONLINE.name().equals(estado)) {
+           System.out.println("es online!");
+       }
     }
 }
