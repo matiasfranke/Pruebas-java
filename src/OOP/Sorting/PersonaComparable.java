@@ -1,18 +1,18 @@
 package OOP.Sorting;
 
-public class Persona implements Comparable<Persona> {
+public class PersonaComparable implements Comparable<PersonaComparable> {
     private String nombre;
     private String apellido;
     private Long dni;
     private Integer edad;
 
-    public Persona() {
+    public PersonaComparable() {
     }
-    public Persona(String nombre) {
+    public PersonaComparable(String nombre) {
         this.nombre = nombre;
     }
 
-    public Persona(String nombre, String apellido, Long dni, int edad) {
+    public PersonaComparable(String nombre, String apellido, Long dni, int edad) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.dni = dni;
@@ -66,7 +66,7 @@ public class Persona implements Comparable<Persona> {
 
 
     @Override
-    public int compareTo(Persona persona) {
+    public int compareTo(PersonaComparable persona) {
         return this.edad - persona.edad;
     }
 }

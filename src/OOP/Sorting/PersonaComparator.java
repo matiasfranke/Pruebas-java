@@ -1,18 +1,18 @@
 package OOP.Sorting;
 
-public class PersonaComparable implements Comparable<PersonaComparable> {
+public class PersonaComparator {
     private String nombre;
     private String apellido;
     private Long dni;
     private Integer edad;
 
-    public PersonaComparable() {
+    public PersonaComparator() {
     }
-    public PersonaComparable(String nombre) {
+    public PersonaComparator(String nombre) {
         this.nombre = nombre;
     }
 
-    public PersonaComparable(String nombre, String apellido, Long dni, int edad) {
+    public PersonaComparator(String nombre, String apellido, Long dni, int edad) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.dni = dni;
@@ -62,11 +62,5 @@ public class PersonaComparable implements Comparable<PersonaComparable> {
     }
     public void trabaja(){
         System.out.println(this.nombre + " Entra a google meets y pregunta si lo escuchan....");
-    }
-
-
-    @Override
-    public int compareTo(PersonaComparable persona) {
-        return this.edad - persona.edad;
     }
 }
